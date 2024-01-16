@@ -1,0 +1,195 @@
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+  <title>Publications related to AI Efficiency</title> 
+</head>
+
+<body>
+
+<div class="center">
+
+<h1>Publications Related to AI Efficiency</h1>
+
+<h3>Parallelism Strategies for Training Massive Models</h3>
+
+<!-- <a href="https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf">
+    (Parameter-Server) Scaling Distributed Machine Learning with the Parameter Server</a><br>
+    OSDI 2014
+<p> -->
+
+<a href="https://arxiv.org/abs/1909.08053">
+    (Tensor-Slicing Parallelism) Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism</a><br>
+    Arxiv 2019
+<p>
+
+<a href="https://proceedings.neurips.cc/paper/2019/file/093f65e080a295f8076b1c5722a46aa2-Paper.pdf">
+    (Pipeline Parallelism) GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism<br>
+    NeurIPS 2019
+<p>
+
+<a href="https://arxiv.org/pdf/1910.02054.pdf">
+    (ZeRO-style Data Parallelism) ZeRO: Memory Optimizations Toward Training Trillion Parameter Models</a><br>
+    SC 2020
+<p>
+
+
+<a href="https://arxiv.org/abs/2104.04473">
+    (3D Parallelism) Efficient large-scale language model training on GPU clusters using megatron-LM</a><br>
+    SC 2021
+<p>    
+
+<a href="https://arxiv.org/pdf/2205.05198.pdf">
+    (Sequence Parallelism) Reducing Activation Recomputation in Large Transformer Models</a><br>
+    Arxiv 2022
+<p>
+
+<h3>System Optimizations for Training Large Models on Limited GPU Resources</h3>
+
+<a href="https://arxiv.org/abs/1604.06174">
+    (Gradient checkpointing aka rematerialization) Training Deep Nets with Sublinear Memory Cost</a><br>
+    Arxiv 2016
+<p>
+
+<a href="https://www.usenix.org/system/files/atc21-ren-jie.pdf">
+    ZeRO-Offload: Democratizing Billion-Scale Model Training</a><br>
+    USENIX ATC 2021
+<p>
+
+<a href="https://arxiv.org/abs/2104.07857">
+    ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning</a><br>
+    SC 2021
+<p>
+
+<a></a>
+
+<a href="https://proceedings.mlr.press/v162/patil22b/patil22b.pdf">
+    POET: Training Neural Networks on Tiny Devices with Integrated Rematerialization and Paging</a><br>
+    ICML 2022
+<p>
+
+
+<h3>System Optimizations for Low Inference Latency and Cost</h3>
+
+<a href="https://arxiv.org/abs/2205.14135">
+    FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness</a><br>
+    NeurIPS 2022
+<p>
+
+<a href="https://arxiv.org/pdf/2207.00032.pdf">
+    DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale</a><br>
+    SC 2022
+<p>    
+
+<a href="https://arxiv.org/abs/2309.06180">
+    ByteTransformer: A High-Performance Transformer Boosted for Variable-Length Inputs</a><br>
+    IPDPS 2023 Best Paper
+<p>
+    
+
+<a href="https://arxiv.org/abs/2309.06180">
+    (vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention</a><br>
+    SOSP 2023
+<p>
+
+<a href="https://arxiv.org/pdf/2303.06865.pdf">
+    FlexGen: High-throughput Generative Inference of Large Language Models with a Single GPU</a><br>
+    ICML 2023
+<p>
+
+<h3>Efficient Algorithms to Make DL Models Smaller, Faster, and Cheaper</h3>
+
+<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/adf7fa39d65e2983d724ff7da57f00ac-Paper-Conference.pdf">
+    ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers</a><br>
+    NeurIPS 2022
+<p>
+
+<a href="https://proceedings.mlr.press/v202/xiao23c/xiao23c.pdf">
+    SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models</a><br>
+    ICML 2023
+<p>
+
+<a href="https://arxiv.org/abs/2210.17323">
+    GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers</a><br>
+    ICLR 2023
+<p>
+
+<a href="https://arxiv.org/abs/2310.17157">
+    Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time</a><br>
+    ICLR 2023
+<p>
+
+<a href="https://arxiv.org/abs/2310.17157">
+    H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models</a><br>
+    ICML 2023
+<p>
+
+<a href="https://hanlab.mit.edu/projects/streamingllm">
+    Efficient Streaming Language Models with Attention Sinks</a><br>
+    Arxiv 2023
+<p>    
+
+<a href="https://arxiv.org/abs/2211.17192">
+    Fast Inference from Transformers via Speculative Decoding</a><br>
+    ICML 2023
+<p> 
+
+<a href="https://arxiv.org/abs/2305.14314">
+    QLoRA: Efficient Finetuning of Quantized LLMs
+</a><br>
+    NeurIPS 2023
+<p> 
+    
+
+<h3>System and Algorithm Co-Design for Efficient Training and Inference</h3>
+
+<a href="https://arxiv.org/abs/1710.03740">
+    Mixed Precision Training</a><br>
+    Arxiv 2017
+<p> 
+
+<a href="https://arxiv.org/abs/2001.05674">
+    Shifted and Squeezed 8-bit Floating Point format for Low-Precision Training of Deep Neural Networks</a><br>
+    ICLR 2020
+<p>
+
+<a href="https://personal.stevens.edu/~hliu77/docs/sc21a.pdf">
+    E.T.: re-thinking self-attention for transformer models on GPUs</a><br>
+    SC 2021
+<p> 
+
+<a href="https://arxiv.org/abs/2306.10209">
+    ZeRO++: Extremely Efficient Collective Communication for Giant Model Training</a><br>
+    Arxiv 2023
+<p> 
+    
+<a href="https://arxiv.org/pdf/2309.17224.pdf">Training and Inference of Large Language Models using 8-bit Floating Point</a><br>
+    Arxiv 2023  
+</div>
+
+<h3>Efficiency Improvements for Emerging Models and Applications</h3>
+
+<a href="https://arxiv.org/abs/2008.13535">DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems</a><br>
+    WWW 2021  
+    <p> 
+
+
+<a href="https://www.jmlr.org/papers/volume23/21-0998/21-0998.pdf">Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity</a><br>
+    JMLR 2022  
+    <p> 
+
+<a href="https://arxiv.org/abs/2112.10752">High-Resolution Image Synthesis with Latent Diffusion Models</a><br>
+    CVPR 2022  
+    <p> 
+
+<a href="https://arxiv.org/abs/2304.08485">Visual Instruction Tuning 
+</a><br>
+    NeurIPS 2023  
+    <p> 
+
+<a href="https://arxiv.org/abs/2308.08155">AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation
+</a><br>
+    Arxiv 2023  
+    <p> 
+
+</body>
+</html>

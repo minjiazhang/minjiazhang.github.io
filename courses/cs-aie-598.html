@@ -1,0 +1,167 @@
+
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+  <title>CS 598 AIE - AI Efficiency: Systems & Algorithms</title> 
+</head>
+
+<body>
+
+<div class="center">
+
+<h1>CS 598 AIE - AI Efficiency: Systems & Algorithms, Spring 2024</h1>
+
+<h2>Basic Information</h2>
+<font size="+1">Instructor:  <a href="../index.html">Minjia Zhang</a><br>
+  Schedule: Tuesdays and Thursdays 2-3:15pm CST<br>
+  Location: 1214 Siebel Center for Computer Science <br>
+Office hours: By appointment<br>
+  Email: minjiaz AT illinois.edu<br>
+  LMS: <a href="https://canvas.illinois.edu/"
+target="_blank">Canvas</a><br>
+Recommended Prerequisites: <a href="https://cs.illinois.edu/academics/courses/CS425">CS 425 - Distributed Systems</a> <a href="https://cs.illinois.edu/academics/courses/CS533">CS 484 - Parallel Programming</a>, <a href="https://cs.illinois.edu/academics/courses/CS533">CS 533 - Parallel Computer Architecture</a>, <a href="https://cs.illinois.edu/academics/courses/CS446">CS 446 - Machine Learning</a><br>
+</font>
+
+<h2>Course Description</h2>
+
+Are you curious about how system techniques enable today's large-scale model training and deliver ultra-fast inference? Do you have a passion for making AI accessible to all by using advanced system and algorithm techniques, significantly reducing the cost of training and deploying deep learning models? If so, this course is for you.
+
+This is a research-oriented course on AI efficiency, which will cover both the core concepts of AI systems and algorithmic methods. Students will learn about system/algorithm design and analysis, and performance optimizations of algorithm implementations. We will study the design and implementation of seminal works in the field of AI efficiency, such as various parallelism strategies that enable large-scale model training on parallel/distributed/heterogeneous hardware. We will also go over inference optimization techniques, including parallel, cache-efficient, compression-based algorithms for fundamental problems in AI efficiency. Many of the principles of system and algorithm design will be illustrated in the context of natural language processing and large language models. Students will read and present research papers, write paper reviews, participate in classroom discussions, and complete a semester-long research project. 
+
+<a name="policy"></a>
+<h2>Course Policy</h2>
+<div class="policy">
+
+<h3>Lectures</h3>
+In each lecture, we will study 1-2 research papers. For each paper
+one student will give a presentation followed by a discussion.
+
+<h3>Grading</h3> The curse assignments consist of (i) writing paper
+reviews, (ii) doing paper presentations, (iii) class participation, and
+(iv) completing an open-ended research project. The breakdown is as
+follows.</p>
+
+<table width="300">
+<tbody>
+<tr><th align="left">Grading Breakdown</th></tr>
+<tr><td>Paper reviews</td><td>20%</td></tr>
+<tr><td>Paper presentations</td><td>25%</td></tr>
+<tr><td>Research project</td><td>45%</td></tr>
+<tr><td>Class participation</td><td>10%</td></tr>
+</tbody>
+</table>
+
+<h3>Paper Reviews</h3> 
+
+Before each lecture, you are expected to have read the papers to be presented in the schedule for that lecture. Furthermore, students also need to submit a review of one paper before every lecture. The review should be on a paper chosen from papers for that lecture.  
+
+<br><br>
+The review should be done independently and include the following contents:
+<ul>
+    <li>The problem the paper is trying to
+      tackle.</li>
+    <li>What's the impact of the work, e.g., why is it an important problem to solve?</li>
+    <li>The main proposed idea(s).</li>
+    <li>A summary of your understanding about different components of the proposed technique, e.g., the purpose of critical design choices.</li>
+    <li>Your perceived strengths and weaknesses of the work, e.g., novelty, significance of improvements, quality of the evaluation, easy-to-use.</li>
+    <li>Is there a room for improvement? If so, which directions you may want to explore or idea you have for improving the techniques? </li>
+</ul>
+
+The review length should be around 4-5 paragraphs. You can discuss the paper with other students, but all of your writting work should be your own. 
+
+
+<h3>Paper Presentations</h3>
+
+Each student will choose and give at least one presentation from the <a href="publication-list.html">AI efficiency reading list</a> in the semester. The presentations should be 20-25 minutes long with
+slides, followed by a discussion. The presenter shall share your learnings from the paper and the content of the presentation can include:
+<ul>
+    <li>The background and motivation of the problem.</li>
+    <li>Existing work in the field. If any relevant information from related work is necessary for fully understanding the presented paper, those should be included as well.</li>
+    <li>New concepts and definitions needed to understand the paper.</li>
+    <li>Key ideas and design in the paper.</li>
+    <li>Evaluation methodology and experimental results.</li>
+    <li>Your own thoughts on the paper, such as the strengths and weaknesses, the purpose of design choices, the future directions based on the work.</li>
+    <li>The presenter should also prepare questions for discussions and lead the discussion of the paper.</li>
+</ul>
+
+Presenter: You are welcome to send slides, notes, and/or questions to the instructor at least two days before the presentation, so he can give you feedback. 
+
+<h3>Research Project</h3> A large portion of the work of this course is in proposing and completing a research project. 
+The project can involve, but certainly is not limited to, any of the following tasks: 
+<ul>
+    <li>Benchmark and analyze important DL workloads to understand their performance gap and identify important angles to optimize their performance.</li>
+    <li>Apply and evaluate how existing solutions work in the context of emerging AI/DL workloads.</li>
+    <li>Design and implement new algorithms that are both theoretically and practially efficient.</li>
+    <li>Design and implement system optimizations, e.g., parallelism, cache-locality, IO-efficiency, to improve the compute/memory/communication efficiency of AI/DL workloads.</li>
+    <li>Offer customized optimization for critical DL workloads where latency is extremely tight.</li>
+    <li>Build library/tool/framework to improve efficiency of a class of problems.</li>
+    <li>Integrate important optimizations into existing frameworks (e.g., DeepSpeed), providing fast and agile inference.</li>
+    <li>Combine system optimization with modeling optimizations.</li>
+    <li>Combine and leverage hardware resources (e.g., GPU/CPU, on-device memory/DRAM/NVMe/SSD) in a principled way.</li>
+    <li>...</li>
+</ul>
+
+<p>The project can also be related to research project that you are currently working on, but it requires instructor's approval.</p>
+
+<p>
+The project will be done in groups of 1-2 people, which consits of a proposal, mid-term report, final presentation, and final report. The tentative timeline for the
+project is as follows.</p>
+
+<table width="500">
+<tbody>
+<tr><th align="left">Assignment</th><th align="left">Due Date</th></tr>
+<tr><td>Pre-proposal meeting</td><td>3/1</td></tr>
+<tr><td>Proposal submission</td><td>3/8</td></tr>
+<trd><td>Weekly progress reports</td><td>3/8, 3/22, 3/29, 4/5, 4/12, 4/19, 4/26</td></tr>
+<tr><td>Midterm report</td><td>3/22</td></tr>
+<tr><td>Project presentation</td><td>4/30</td></tr>
+<tr><td>Final report</td><td>5/10</td></tr>
+</tbody>
+</table>
+</p>
+
+<ul>
+<li>Pre-proposal meeting: Each group will schedule a <b>15-minute</b> meeting with the instructor to discuss what they would like to propose. It is recommended that you send a proposal draft to the instructor before the meeting starts. The instructor will provide feedback in terms of the direction and additional aspects that can be incoporated into the proposal. 
+</li> 
+<li>Proposal submission: The proposal should be about <b>2 pages long</b> (excluding references) and will describe the
+project that you are proposing to work on, the motivation, related works you have already identified, the main components of the project, as well as a projected weekly schedule that describes how you plan to
+accomplish the project throughout the semester.  
+</li>
+<li>Weekly progress reports: You will submit a weekly report due at 11:59pm on Friday, starting 3/8. In the report, please describe (i) <b>what was done</b>, i.e.,  your progress on the project during the week, (ii) <b>what to discuss</b>, e.g., any issues that you encountered and need feedback, and (iii) <b>what's next in order of priority</b>. Each student will submit an individual progress report.
+  </li>
+<li>Midterm report: Each person needs to submit a midterm report, which summarizes what you have accomplished so far. If you work in a group, this shall include your contribution to the project. The report can also include any obstacles you have encountered, adjustments to the proposed tasks, and a schedule of the remaining tasks. This should be about <b>4 pages</b> long (excluding references). 
+</li>
+<li>Project presentation: The course has final project presentations, where each group will present their research to the instructor and classmates, and learn about other projects. 
+</li>
+<li>Final report: The final report will be in the style of a research paper describing your project. The recommended length is about 6-page long (excluding references) and a potential division can be:
+  <ul>
+    <li>An abstract, which summarizes the project (0.25 pages).</li>
+    <li>An introduction, which describes and motivates the problem and summarizes the main results of the work (0.75 pages).</li>
+    <li>A brief discussion of related work (0.5 pages).</li>
+    <li>A brief overview of preliminary and background knowledge needed to understand the papge (0.75 pages).</li>
+    <li>Analysis and characterization to show the existence and severity of the problem (1 page).</li>
+    <li>Main design and methodology (1 pages).</li>
+    <li>Implementation (0.5 pages).</li>
+    <li>Evaluation methodology and experiment results (2 pages).</li>
+    <li>Concluding remarks, which can include a discussion of open questions or directions for future work (0.25 pages).</li>
+  </ul> 
+  Students are encouraged to submit the outline of their final report to the instructor to get feedback before finalizing the writing.
+</li>
+</ul>
+
+<h3>Canvas</h3>
+We will be
+using <a href=""
+target="_blank">Canvas</a> for answering questions. You may publicly post questions about the papers or any cool ideas that you have. Discussions among students is encouraged. If possible, please use Convas instead of emailing the course instructor. You may use a private note if you want your post to be visible only to the course staff. 
+
+<!-- <h3>Computing Resources</h3>
+We will be using the National Center for Supercomputing Applications (NCSA). -->
+
+</div>
+
+</tbody>
+</table>
+
+</div>
+
+</html>
