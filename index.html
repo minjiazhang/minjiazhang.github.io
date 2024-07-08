@@ -63,7 +63,7 @@ a {
 
 <script>
 
-  function clickHandle(evt, animalName) {
+  function clickHandle(evt, CategoryName) {
     let i, tabcontent, tablinks;
   
     // This is to clear the previous clicked content.
@@ -79,7 +79,7 @@ a {
     }
   
     // Display the clicked tab and set it to active.
-    document.getElementById(animalName).style.display = "block";
+    document.getElementById(CategoryName).style.display = "block";
     evt.currentTarget.className += " active";
   }
   </script>
