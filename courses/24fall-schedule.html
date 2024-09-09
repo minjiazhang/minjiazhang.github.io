@@ -1,3 +1,52 @@
+<!-- 
+Here is the course schedule 
+Category	 	Paper Name	#Presenters	Name 1	Name 2
+ 	8/28/2024	Course Introduction		Minjia Zhang	
+	8/30/2024	Training Efficiency			
+	9/4/2024	Inference Effiiency			
+	9/6/2024	DeepSpeed Library			
+System Optimizations for Training Massive Models	9/11/2024	(Tensor-slicing parallelism) Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism	1	Nicholas Satchanov	
+	9/11/2024	(Pipeline Parallelism) GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism	1	Bhagyashree Taleka	
+	9/13/2024	(3D parallelism) Efficient large-scale language model training on GPU clusters using megatron-LM	2	Qinjun Jiang	Tong Wei
+	9/13/2024	(Sequence Parallelism) Reducing Activation Recomputation in Large Transformer Models	1	Yihe Zhang	
+	9/18/2024	(Sequence Parallelism) Ring Attention with Blockwise Transformers for Near-Infinite Context	1	Jiankun Wang	
+	9/18/2024	(ZeRO-style Data Parallelism) ZeRO: Memory Optimizations Toward Training Trillion Parameter Models	1	Sizheng Zhang	
+	9/20/2024	ZeRO-Offload: Democratizing Billion-Scale Model Training	1	Yueming Yuan	
+	9/20/2024	ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning	2	Nikhil Kanamarla	Xinyi Song
+	9/25/2024	ZeRO++: Extremely Efficient Collective Communication for Giant Model Training	2	Hyungyo Kim	Noelle Crawford
+	9/25/2024	Mixed Precision Training	1	Zelei Shao	
+	9/27/2024	(Auto-Parallelism) Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning	2	Khoa Pham	Julian Yu
+	9/27/2024	(Gradient checkpointing aka rematerialization) Training Deep Nets with Sublinear Memory Cost	1	Aydan Pirani	
+	10/2/2024	Coop: Memory is not a Commodity	1	Ashley Chen	
+	10/2/2024	(Pipeline Parallelism) Zero Bubble Pipeline Parallelism	1	Enguang Fan	
+System Optimizations for Low Inference Latency and Cost	10/4/2024	FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning	1	Deema Alnuhait	
+	10/4/2024	Efficiently Scaling Transformer Inference	2	Nachuan Wang	Akul Gupta
+	10/9/2024	(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention	2	Aakriti	Jianping Li
+	10/9/2024	SGLang: Efficient Execution of Structured Language Model Programs	1	Anay Bhakat	
+	10/11/2024	vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention	2	Rahul Bothra	Chengyi Wang
+	10/16/2024	Orca: A Distributed Serving System for Transformer-Based	2	Sarthak Chakraborty	Ben Civjan
+	10/18/2024	TVM: An Automated End-to-End Optimizing Compiler for Deep Learning	2	Ryan Ziegler	Sultan Durrani
+	10/23/2024	Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations	2	Krut Patel	Neel Dani
+Pre-proposal meetings		15 minutes each group (need schedule ahead-of-time)	1		
+			1		
+Efficient Algorithms to Make DL Models Smaller, Faster, and Cheaper	10/25/2024	AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration	1	Raunak Shah	
+	10/25/2024	SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models	1	Aditi Tiwari	
+	10/30/2024	GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers	1	Xiaoke LI	
+	10/30/2024	H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models	1	Saksham Gera	
+	10/30/2024	Efficient Streaming Language Models with Attention Sinks	1	Ya-Ting Pai	
+	11/1/2024	Fast Inference from Transformers via Speculative Decoding	1	Hanyang Chen	
+	11/1/2024	QLoRA: Efficient Finetuning of Quantized LLMs	1	Ruize Gao	
+		Mamba: Linear-Time Sequence Modeling with Selective State Spaces	1		
+Efficiency Improvements for Emerging Real-World Models and Applications	11/6/2024	Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity	2	Xiaocong Yang 	Aryan Bhardwaj
+	11/8/2024	Latent Consistency Models: Synthesizing High-Resolution Images with Few-Step Inference	1	Dazhen Chen	
+	11/13/2024	The Illustrated AlphaFold	1	Chenghao Mo	
+	11/15/2024	CAGRA: Highly Parallel Graph Construction and Approximate Nearest Neighbor Search for GPUs	1	Simon Sun	
+	11/20/2024	Mamba: Linear-Time Sequence Modeling with Selective State Spaces	1	Jiatong Li	
+	11/20/2024	Scalable Diffusion Models with Transformers	1	Haoran Yuan	
+	11/22/2024	Software-Hardware Co-design for Fast and Scalable Training of Deep Learning Recommendation Models	2	Jiaqi Lou	Divya Koya
+-->
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head><meta charset="utf-8"><meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/">
@@ -89,7 +138,7 @@
 					</tr>
 					<tr class="r6">
 						<td class="c1">Sept 11</td>
-						<td class="c2">Jiachen Yuan</td>
+						<td class="c2">Bhagyashree Taleka</td>
 						<td class="c3">(Pipeline Parallelism) GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism
 						</td>
 						<td class="c5"><a href="fall24-resource/GPipe.pdf">pdf</a></td>
@@ -145,7 +194,7 @@
 					</tr>
 					<tr class="r13">
 						<td class="c1">Sept 25</td>
-						<td class="c2">Bhagyashree Taleka, <br /> Rahul Bothra</td>
+						<td class="c2">Hyungyo Kim, <br /> Noelle Crawford</td>
 						<td class="c3">ZeRO++: Extremely Efficient Collective Communication for Giant Model Training
 						</td>
 						<td class="c5"><a href="fall24-resource/ZeRO++.pdf">pdf</a></td>
@@ -167,17 +216,9 @@
 						<td class="c5"><a href="fall24-resource/alpa.pdf">pdf</a></td>
 						<td class="c6"></td> <td class="c7"></td>
 					</tr>
-					<tr class="r16">
-						<td class="c1">Sept 27</td>
-						<td class="c2">Shuning Zhang</td>
-						<td class="c3">(Pipeline Parallelism) Zero Bubble Pipeline Parallelism
-						</td>
-						<td class="c5"><a href="fall24-resource/Pipeline Parallelism.pdf">pdf</a></td>
-						<td class="c6"></td> <td class="c7"></td>
-					</tr>
 					<tr class="r17">
-						<td class="c1">Oct 2</td>
-						<td class="c2">Aryan Bhardwaj</td>
+						<td class="c1">Sept 27</td>
+						<td class="c2">Aydan Pirani</td>
 						<td class="c3">(Gradient checkpointing aka rematerialization) Training Deep Nets with Sublinear Memory Cost
 						</td>
 						<td class="c5"><a href="fall24-resource/Training Deep Nets with Sublinear Memory Cost.pdf">pdf</a></td>
@@ -185,10 +226,18 @@
 					</tr>
 					<tr class="r18">
 						<td class="c1">Oct 2</td>
-						<td class="c2">Sultan</td>
+						<td class="c2">Ashley Chen</td>
 						<td class="c3">Coop: Memory is not a Commodity
 						</td>
 						<td class="c5"><a href="fall24-resource/Coop- Memory is not a Commodity .pdf">pdf</a></td>
+						<td class="c6"></td> <td class="c7"></td>
+					</tr>
+					<tr class="r16">
+						<td class="c1">Oct 2</td>
+						<td class="c2">Enguang Fan</td>
+						<td class="c3">(Pipeline Parallelism) Zero Bubble Pipeline Parallelism
+						</td>
+						<td class="c5"><a href="fall24-resource/Pipeline Parallelism.pdf">pdf</a></td>
 						<td class="c6"></td> <td class="c7"></td>
 					</tr>
 
@@ -198,7 +247,7 @@
 					</tr>
 					<tr class="r19">
 						<td class="c1">Oct 4</td>
-						<td class="c2">Nachuan Wang</td>
+						<td class="c2">Deema Alnuhait</td>
 						<td class="c3">FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
 						</td>
 						<td class="c5"><a href="fall24-resource/FlashAttention-2- Faster Attention with Better Parallelism and Work Partitioning .pdf">pdf</a></td>
@@ -206,7 +255,7 @@
 					</tr>
 					<tr class="r20">
 						<td class="c1">Oct 4</td>
-						<td class="c2">Hanyang Chen, <br /> Divya Koya</td>
+						<td class="c2">Nachuan Wang, <br /> Akul Gupta</td>
 						<td class="c3">Efficiently Scaling Transformer Inference
 						</td>
 						<td class="c5"><a href="fall24-resource/Efficiently Scaling Transformer Inference.pdf">pdf</a></td>
@@ -214,24 +263,27 @@
 					</tr>
 					<tr class="r21">
 						<td class="c1">Oct 9</td>
-						<td class="c2">Neel Dani, <br /> Jianping Li</td>
+						<td class="c2">Aakriti, <br /> Jianping Li</td>
 						<td class="c3">(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention
 						</td>
 						<td class="c5"><a href="fall24-resource/vllm.pdf">pdf</a></td>
 						<td class="c6"></td> <td class="c7"></td>
 					</tr>
-					<tr class="r22">
+					<tr class="rx">
 						<td class="c1">Oct 9</td>
-						<td class="c2">Amaan Khan, <br /> Akul Gupta</td>
+						<td class="c2">Anay Bhakat</td>
+						<td class="c3">SGLang: Efficient Execution of Structured Language Model Programs
+						</td>
+						<td class="c5"><a href="fall24-resource/sglang.pdf">pdf</a></td>
+						<td class="c6"></td> <td class="c7"></td>
+					</tr>
+					<tr class="r22">
+						<td class="c1">Oct 11</td>
+						<td class="c2">Rahul Bothra, <br /> Chengyi Wang</td>
 						<td class="c3">vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
 						</td>
 						<td class="c5"><a href="fall24-resource/vAttention.pdf">pdf</a></td>
 						<td class="c6"></td> <td class="c7"></td>
-					</tr>
-					<tr class="r23">
-						<td class="c1">Oct 11</td>
-						<td class="c3" colspan="3"><strong>No Class: Prepare for Proposal</strong>
-						</td>
 					</tr>
 					<tr>
 						<td class="c1">Oct 13</td>
@@ -239,7 +291,7 @@
 					</tr>
 					<tr class="r24">
 						<td class="c1">Oct 16</td>
-						<td class="c2">Sarthak Chakraborty</td>
+						<td class="c2">Sarthak Chakraborty, <br /> Ben Civjan</td>
 						<td class="c3">Orca: A Distributed Serving System for Transformer-Based
 						</td>
 						<td class="c5"><a href="fall24-resource/Orca.pdf">pdf</a></td>
@@ -247,7 +299,7 @@
 					</tr>
 					<tr class="r25">
 						<td class="c1">Oct 18</td>
-						<td class="c2">Ryan Ziegler, <br /> Yinan Zhao</td>
+						<td class="c2">Ryan Ziegler, <br /> Sultan Durrani</td>
 						<td class="c3">TVM: An Automated End-to-End Optimizing Compiler for Deep Learning
 						</td>
 						<td class="c5"><a href="fall24-resource/TVM.pdf">pdf</a></td>
@@ -255,7 +307,7 @@
 					</tr>
 					<tr class="r26">
 						<td class="c1">Oct 23</td>
-						<td class="c2">Krut Patel, <br /> Anay Bhakat</td>
+						<td class="c2">Krut Patel, <br /> Neel Dani</td>
 						<td class="c3">Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations
 						</td>
 						<td class="c5"><a href="fall24-resource/Triton.pdf">pdf</a></td>
@@ -284,14 +336,23 @@
 					</tr>
 					<tr class="r29">
 						<td class="c1">Oct 30</td>
-						<td class="c2">Muyan Hu</td>
+						<td class="c2">Xiaoke LI</td>
 						<td class="c3">GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers
 							</td>
 						<td class="c5"><a href="fall24-resource/GPTQ.pdf">pdf</a></td>
 						<td class="c6"></td> <td class="c7"></td>
 					</tr>
-					<tr class="r30">
+					<tr class="rx">
 						<td class="c1">Oct 30</td>
+						<td class="c2">Saksham Gera</td>
+						<td class="c3">H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models
+						</td>
+						<td class="c5"><a href="fall24-resource/h2o.pdf">pdf</a></td>
+						<td class="c6"></td> <td class="c7"></td>
+					</tr>
+
+					<tr class="r30">
+						<td class="c1">Nov 1</td>
 						<td class="c2">Ya-Ting Pai</td>
 						<td class="c3">Efficient Streaming Language Models with Attention Sinks
 						</td>
@@ -300,15 +361,15 @@
 					</tr>
 					<tr class="r31">
 						<td class="c1">Nov 1</td>
-						<td class="c2">Xiaocong Yang</td>
+						<td class="c2">Hanyang Chen</td>
 						<td class="c3">Fast Inference from Transformers via Speculative Decoding
 						</td>
 						<td class="c5"><a href="fall24-resource/Fast Inference from Transformers via Speculative Decoding .pdf">pdf</a></td>
 						<td class="c6"></td> <td class="c7"></td>
 					</tr>
 					<tr class="r32">
-						<td class="c1">Nov 1</td>
-						<td class="c2">Saksham Gera</td>
+						<td class="c1">Nov 6</td>
+						<td class="c2">Ruize Gao</td>
 						<td class="c3">QLoRA: Efficient Finetuning of Quantized LLMs
 						</td>
 						<td class="c5"><a href="fall24-resource/QLoRA- Efficient Finetuning of Quantized LLMs.pdf">pdf</a></td>
@@ -321,23 +382,39 @@
 					</tr>
 					<tr class="r33">
 						<td class="c1">Nov 8</td>
-						<td class="c2">Ruize Gao</td>
+						<td class="c2">Xiaocong Yang, <br /> Aryan Bhardwaj</td>
 						<td class="c3">Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
 						</td>
 						<td class="c5"><a href="fall24-resource/Switch Transformers.pdf">pdf</a></td>
 						<td class="c6"></td> <td class="c7"></td>
 					</tr>
-					<tr class="r34">
+					<tr class="rx">
 						<td class="c1">Nov 13</td>
-						<td class="c2">Jiatong Li</td>
+						<td class="c2">Dazhen Chen</td>
+						<td class="c3">Latent Consistency Models: Synthesizing High-Resolution Images with Few-Step Inference
+						</td>
+						<td class="c5"><a href="fall24-resource/LATENT CONSISTENCY MODELS.pdf">pdf</a></td>
+						<td class="c6"></td> <td class="c7"></td>
+					</tr>
+					<tr class="r37">
+						<td class="c1">Nov 13</td>
+						<td class="c2">Chenghao Mo</td>
+						<td class="c3">The Illustrated AlphaFold
+						</td>
+						<td class="c5"><a href="https://elanapearl.github.io/blog/2024/the-illustrated-alphafold/">pdf</a></td>
+						<td class="c6"></td> <td class="c7"></td>
+					</tr>
+					<tr class="r34">
+						<td class="c1">Nov 15</td>
+						<td class="c2">Simon Sun</td>
 						<td class="c3">CAGRA: Highly Parallel Graph Construction and Approximate Nearest Neighbor Search for GPUs
 						</td>
 						<td class="c5"><a href="fall24-resource/CAGRA.pdf">pdf</a></td>
 						<td class="c6"></td> <td class="c7"></td>
 					</tr>
 					<tr class="r35">
-						<td class="c1">Nov 15</td>
-						<td class="c2">Ananya Sehgal, <br /> Xin Xu</td>
+						<td class="c1">Nov 20</td>
+						<td class="c2">Jiatong Li</td>
 						<td class="c3">Mamba: Linear-Time Sequence Modeling with Selective State Spaces
 						</td>
 						<td class="c5"><a href="fall24-resource/Mamba.pdf">pdf</a></td>
@@ -345,23 +422,15 @@
 					</tr>
 					<tr class="r36">
 						<td class="c1">Nov 20</td>
-						<td class="c2">Aydan Pirani</td>
+						<td class="c2">Haoran Yuan</td>
 						<td class="c3">Scalable Diffusion Models with Transformers
 						</td>
 						<td class="c5"><a href="fall24-resource/Scalable Diffusion Models with Transformers.pdf">pdf</a></td>
 						<td class="c6"></td> <td class="c7"></td>
 					</tr>
-					<tr class="r37">
-						<td class="c1">Nov 20</td>
-						<td class="c2">Chenghao Mo</td>
-						<td class="c3">The Illustrated AlphaFold
-						</td>
-						<td class="c5"><a href="https://elanapearl.github.io/blog/2024/the-illustrated-alphafold/">pdf</a></td>
-						<td class="c6"></td> <td class="c7"></td>
-					</tr>
 					<tr class="r38">
 						<td class="c1">Nov 22</td>
-						<td class="c2">Jiaqi Lou, <br /> Haoran Yuan</td>
+						<td class="c2">Jiaqi Lou, <br /> Divya Koya</td>
 						<td class="c3">Software-Hardware Co-design for Fast and Scalable Training of Deep Learning Recommendation Models
 						</td>
 						<td class="c5"><a href="fall24-resource/Software-Hardware Co-design for Fast and Scalable Training of Deep Learning Recommendation Models .pdf">pdf</a></td>
