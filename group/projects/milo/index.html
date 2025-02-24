@@ -221,24 +221,24 @@
         <div class="content">
           <h2 class="title is-3" style="font-weight: bold; font-family: Arial;">Method</h2>
           <ul>
-          <li style="margin-top: 10px;"> Universal Checkpointing introduces atomic checkpoint, a new checkpoint structure that decouples checkpoints from specific parallelism strategies and serves as a common representation for flexible reconfigurable parallelism, that enables reconfigurable parallelism for a broad set of
-            commonly used parallelism strategies.</li>  
+          <li style="margin-top: 10px;"> MiLo introduces Low-rank Compensators (LoRC) which . 
+            The quantization and LoRC are complementary to each other through an iterative optimization process, which </li>  
             <div class="content" style="margin-top: 10px; text-align: center;">
-              <img src="./static/images/ucp.png"
+              <img src="./static/images/MiLo_overall.png"
               class="interpolation-image"
-              alt="UCP method." style="width: 90%;"/>
+              alt="MiLo." style="width: 90%;"/>
             </div>
-          <li style="margin-top: 30px;"> Universal Checkpointing designs a pattern-based reconfiguration pipeline, which provides systematic and automated parallelism reconfiguration through a carefully designed pattern set and pattern-based reconfiguration operations. </li>
+          <li style="margin-top: 30px;"> MiLo explore the rank sensitivity of the  from </li>
             <div class="content" style="margin-top: 10px; text-align: center;">
               <img src="./static/images/pattern.png"
               class="interpolation-image"
-              alt="UCP method." style="width: 50%;"/>
+              alt="Rank sensitivity." style="width: 50%;"/>
             </div>
-          <li style="margin-top: 30px;"> Universal Checkpointing introduces nested parallel reconfiguration and lazy reconfiguration invocation. Compared to the sequential approach used in ad-hoc conversion scripts, our nested-parallel method achieves a <strong>14-257x</strong> reduction in time cost for models ranging from 7B to 1T parameters.</li>
+          <li style="margin-top: 30px;"> MiLo also introduce effective INT3 kernel to accelerate  </li>
             <div class="content" style="margin-top: 10px; text-align: center;">
               <img src="./static/images/nested_conversion.png"
               class="interpolation-image"
-              alt="UCP method." style="width: 50%;"/>
+              alt="MiLo Kernel." style="width: 50%;"/>
             </div>
         <!-- </ul> -->
           <!-- <img src="./static/images/ucp.png" -->
@@ -263,8 +263,11 @@
           <h2 class="title is-3">Evaluation</h2>
         </div>
         <p>
-          We evaluate UCP on several real-world large-scale LLM models, including Megatron-LM GPT, LLaMA , and sparse MoEs. Our evaluation results show that UCP enables system capabilities to resume training with a wide range of parallelism strategies, such as ZeRO-1/2/3 data parallelism, tensor-slicing parallelism, pipeline parallelism, and sequence parallelism, on elastic resources without compromising model quality. Our evaluation also shows that UCP is lightweight, adding zero cost when saving checkpoints and resuming training with different parallelism strategies at a small cost of UCP transformation. UCP has been used to train the BLOOM 176B model and several real-world large-scale models at Microsoft such as Phi-3, greatly improving these models's resilience to hardware failures during training and reducing their training time by exploiting elastic capacity
+          We perform MiLo on popular open-source MoE models, including Mixtral-8x7B and DeepSeek-MoE, and evaulate the performance on a wide range of benchmarks. 
+          Our evaluation shows that MiLo and our 
+          Our evaluation also reveals that 
         </p>
+        
       </div>
     </div>
   </div>
