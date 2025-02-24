@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Universal Checkpointing: Efficient and Flexible Checkpointing for Large Scale Distributed Training.">
-  <meta name="keywords" content="Universal Checkpointing, DNN, Training">
+        content="MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators.">
+  <meta name="keywords" content="MiLo, Quantization, Low Rank Matrices, CUDA">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Universal Checkpointing: Efficient and Flexible Checkpointing for Large Scale Distributed Training</title>
+  <title>MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -73,30 +73,19 @@
           <h1 class="title is-1 publication-title" style="font-size: 45px;">Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://xinyulian.tech/">Xinyu Lian</a><sup>1</sup>,</span>
+              <a href="https://beichenhuang.github.io/">Beichen Huang</a><sup>*1，2</sup>,</span>
             <span class="author-block">
-              <a href="https://github.com/samadejacobs">Sam Ade Jacobs</a><sup>2</sup>,</span>
+              <a href="https://yueming-yuan.github.io/">Yueming Yuan</a><sup>*1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/lev-kurilenko-99a217117/">Lev Kurilenko</a><sup>2</sup>,
-            </span>
+              <a href="https://github.com/ZeleiShao">Zelei Shao</a><sup>*1</sup>,</span>
             <span class="author-block">
-              <a href="https://tohtana.github.io/">Masahiro Tanaka</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://stasosphere.com/machine-learning/">Stas Bekman</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.microsoft.com/en-us/research/people/olruwase/">Olatunji Ruwase</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://minjiazhang.github.io/">Minjia Zhang</a><sup>1</sup>
-            </span>
+              <a href="https://minjiazhang.github.io/">Minjia Zhang</a><sup>1</sup>,</span>
           </div>
  
           <div class="is-size-5 publication-authors">
             <span class="author-block" style="margin-right: 10px;"><sup>1</sup>University of Illinois Urbana-Champaign</span>
-            <span class="author-block" style="margin-right: 10px;"><sup>2</sup>Microsoft</span>
-            <span class="author-block"><sup>3</sup>Snowflake</span>
+            <span class="author-block" style="margin-right: 10px;"><sup>2</sup>Work done while intern at UIUC</span> 
+            <span class="author-block" style="margin-right: 10px;"><sup>*</sup>Equal Contributors</span>
           </div>
 
           <!-- <div class="is-size-5">
@@ -175,10 +164,10 @@
         <div class="content">
           <h2 class="title is-3" style="font-weight: bold; font-family: Arial;">News</h2>
           <ul>
-            <li style="margin-top: 10px;">2024-12-23 Universal Checkpointing is adopted by <a href="https://en.wikipedia.org/wiki/Renmin_University_of_China">Renmin University of China</a> for <a href="https://arxiv.org/abs/2412.17743" style="color: darkred;">YuLan-Mini (2.4B)</a> model pre-training.</li>
+<!--             <li style="margin-top: 10px;">2024-12-23 Universal Checkpointing is adopted by <a href="https://en.wikipedia.org/wiki/Renmin_University_of_China">Renmin University of China</a> for <a href="https://arxiv.org/abs/2412.17743" style="color: darkred;">YuLan-Mini (2.4B)</a> model pre-training.</li>
             <li style="margin-top: 10px;">2024-09-09 Universal Checkpointing is adopted by <a href="https://www.berkeley.edu">University of California, Berkeley</a> for <a href="https://arxiv.org/pdf/2409.02231" style="color: darkred;">SmileyLlama (8B)</a> model fine-tuning.</li>
             <li style="margin-top: 10px;">2024-08-30 Universal Checkpointing is adopted by <a href="https://www.microsoft.com/en-us">Microsoft</a> for <a href="https://huggingface.co/microsoft/Phi-3.5-MoE-instruct" style="color: darkred;">Phi-3.5-MoE (42B) </a> model pre-training. </li>
-            <li style="margin-top: 10px;">2023-06-27 Universal Checkpointing is adopted by <a href="https://bigscience.huggingface.co">BigScience</a> for <a href="https://arxiv.org/abs/2211.05100" style="color: darkred;">BLOOM (176B)</a> model pre-training.</li>
+            <li style="margin-top: 10px;">2023-06-27 Universal Checkpointing is adopted by <a href="https://bigscience.huggingface.co">BigScience</a> for <a href="https://arxiv.org/abs/2211.05100" style="color: darkred;">BLOOM (176B)</a> model pre-training.</li> -->
           </ul>
         </div>
       </div>
@@ -212,11 +201,7 @@
         <h2 class="title is-3" style="font-weight: bold; font-family: Arial;">Abstract</h2>
         <div class="content has-text-justified" style="margin-top: -10pt;">
           <p>
-            Existing checkpointing approaches seem ill-suited for distributed training even though hardware limitations make model parallelism, i.e., sharding model state across multiple accelerators, a requirement for model scaling. Consolidating distributed model state into a single checkpoint unacceptably slows down training, and is impractical at extreme scales. Distributed checkpoints, in contrast, are tightly coupled to the model parallelism and hardware configurations of the training run, and thus unusable on different configurations. To address this problem, we propose Universal Checkpointing, a technique that enables efficient checkpoint creation while providing the flexibility of resuming on arbitrary parallelism strategy and hardware configurations. Universal Checkpointing unlocks unprecedented capabilities for large-scale training such as improved resilience to hardware failures through continued training on remaining healthy hardware, and reduced training time through opportunistic exploitation of elastic capacity.
-          </p>
-          <p>
-          UCP supports flexible checkpoint transformation along any training parallelism techniques (e.g., ZeRO-DP, TP, PP, SP). It enables elastic resource management, allowing easy scaling up and down of training and fine-tuning with varying hardware resources. UCP includes a convenient language-integrated programming interface that allows users to describe various parallelism patterns and provides transformation operations to easily transform distributed checkpoints into UCP. UCP also provides cross-framework support, enabling resuming training of checkpoints from other popular training frameworks, such as HuggingFace transformer accelerate and PyTorch lightning with DeepSpeed as a backend.
-            <!-- The key insight of Universal Checkpointing is the selection of the optimal representation in each phase of the checkpointing life cycle: distributed representation for saving, and consolidated representation for loading. This is achieved using two key mechanisms. First, the universal checkpoint format, which consists of a consolidated representation of each model parameter and metadata for mapping parameter fragments into training ranks of arbitrary model-parallelism configuration. Second, the universal checkpoint language, a simple but powerful specification language for converting distributed checkpoints into the universal checkpoint format. Our evaluation demonstrates the effectiveness and generality of Universal Checkpointing on state-of-the-art model architectures and a wide range of parallelism techniques. -->
+          A critical approach for efficiently deploying Mixture-of-Experts (MoE) models with massive parameters is quantization. However, state-of-the-art MoE models suffer from non-negligible accuracy loss with extreme quantization, such as under 4 bits. To address this, we introduce MiLo, a novel method that augments highly quantized MoEs with a mixture of low-rank compensators. These compensators consume only a small amount of additional memory but significantly recover accuracy loss from extreme quantization. MiLo also identifies that MoE models exhibit distinctive characteristics across weights due to their hybrid dense-sparse architectures, and employs adaptive rank selection policies along with iterative optimizations to close the accuracy gap. MiLo does not rely on calibration data, allowing it to generalize to different MoE models and datasets without overfitting to a calibration set. To avoid the hardware inefficiencies of extreme quantization, such as 3-bit, MiLo develops Tensor Core-friendly 3-bit kernels, enabling measured latency speedups on 3-bit quantized MoE models. Our evaluation shows that MiLo outperforms existing methods on SoTA MoE models across various tasks.  
           </p>
         </div>
       </div>
