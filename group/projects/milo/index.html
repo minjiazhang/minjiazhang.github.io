@@ -221,22 +221,26 @@
         <div class="content">
           <h2 class="title is-3" style="font-weight: bold; font-family: Arial;">Method</h2>
           <ul>
-          <li style="margin-top: 10px;"> MiLo introduces Low-rank Compensators (LoRC) which . 
-            The quantization and LoRC are complementary to each other through an iterative optimization process, which </li>  
+          <li style="margin-top: 10px;"> MiLo introduces Low-rank Compensators (LoRC) to compensate the quantization error with a minimal additional memory overhead. 
+            The quantization and LoRC are complementary to each other through an iterative optimization process, which requires no calibration dataset, leading to a fast and efficient algorithm. 
+            MiLo allows a bespoke LoRC rank selecting strategy, and this features makes MiLo adaptive to memory constraint while keeping a high quantization quality.</li>  
             <div class="content" style="margin-top: 10px; text-align: center;">
               <img src="./static/images/MiLo_overall.png"
               class="interpolation-image"
               alt="MiLo." style="width: 90%;"/>
             </div>
-          <li style="margin-top: 30px;"> MiLo explore the rank sensitivity of the  from </li>
+          <li style="margin-top: 30px;"> MiLo explores the rank sensitivity of the LoRC from two perspectives: model structure and weight statistical index, to guide the rank selection. 
+            To be specific, MiLo reveals that dense layers, including shared experts and self-attention layers, deserves more rank. 
+            MiLo also reveals a positive correlation between Kurtosis value of the weight and quantization error, and naturally lead to the set a high rank for weight with high Kurotsis value.</li>
             <div class="content" style="margin-top: 10px; text-align: center;">
-              <img src="./static/images/pattern.png"
+              <img src="./static/images/Kurtosis.png"
               class="interpolation-image"
-              alt="Rank sensitivity." style="width: 50%;"/>
+              alt="Kurtosis Value and Quantization Error." style="width: 50%;"/>
             </div>
-          <li style="margin-top: 30px;"> MiLo also introduce effective INT3 kernel to accelerate  </li>
+          <li style="margin-top: 30px;"> MiLo also introduces effective INT3 CUDA kernel to accelerate the inference, which fills the gap in this area. It incooperates with memory-efficient bitpacking, 
+            efficient INT3-to-FP16 dequantization, and optimized matrix manipulation pipeline.  </li>
             <div class="content" style="margin-top: 10px; text-align: center;">
-              <img src="./static/images/nested_conversion.png"
+              <img src="./static/images/Kernel.png"
               class="interpolation-image"
               alt="MiLo Kernel." style="width: 50%;"/>
             </div>
@@ -264,10 +268,13 @@
         </div>
         <p>
           We perform MiLo on popular open-source MoE models, including Mixtral-8x7B and DeepSeek-MoE, and evaulate the performance on a wide range of benchmarks. 
-          Our evaluation shows that MiLo and our 
-          Our evaluation also reveals that 
+          Our evaluation shows that MiLo keeps 
         </p>
-        
+        <div class="content" style="margin-top: 10px; text-align: center;">
+          <img src="./static/images/MiLo_eval.png"
+          class="interpolation-image"
+          alt="MiLo Kernel." style="width: 50%;"/>
+        </div>
       </div>
     </div>
   </div>
