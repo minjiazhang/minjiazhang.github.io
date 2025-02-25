@@ -235,14 +235,14 @@
             <div class="content" style="margin-top: 10px; text-align: center;">
               <img src="./static/images/Kurtosis.png"
               class="interpolation-image"
-              alt="Kurtosis Value and Quantization Error." style="width: 50%;"/>
+              alt="Kurtosis Value and Quantization Error." style="width: 90%;"/>
             </div>
           <li style="margin-top: 30px;"> MiLo also introduces effective INT3 CUDA kernel to accelerate the inference, which fills the gap in this area. It incooperates with memory-efficient bitpacking, 
             efficient INT3-to-FP16 dequantization, and optimized matrix manipulation pipeline.  </li>
             <div class="content" style="margin-top: 10px; text-align: center;">
               <img src="./static/images/Kernel.png"
               class="interpolation-image"
-              alt="MiLo Kernel." style="width: 50%;"/>
+              alt="MiLo Kernel." style="width: 90%;"/>
             </div>
         <!-- </ul> -->
           <!-- <img src="./static/images/ucp.png" -->
@@ -268,12 +268,13 @@
         </div>
         <p>
           We perform MiLo on popular open-source MoE models, including Mixtral-8x7B and DeepSeek-MoE, and evaulate the performance on a wide range of benchmarks. 
-          Our evaluation shows that MiLo keeps 
+          Our evaluation shows that MiLo preserves 87% of Wikitext2 perplexity and 97% of zero-shot accuracy with 22% compression ratio.
+          MiLo also outperforms other quantization methods on both quantization quality and quantization speed, due to the adaptive LoRC and optimization based algorithm.
         </p>
         <div class="content" style="margin-top: 10px; text-align: center;">
           <img src="./static/images/MiLo_eval.png"
           class="interpolation-image"
-          alt="MiLo Kernel." style="width: 50%;"/>
+          alt="MiLo Kernel." style="width: 90%;"/>
         </div>
       </div>
     </div>
