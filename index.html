@@ -393,13 +393,13 @@ a {
                 <td width="140"><img src="figs/superoffload.png" width="200" height="200"></td>
                 <td width="20"></td>
                 <td valign="middle" width="800">
-                  <p class="caption-1"><strong>Large-Scale LLM Training and Inference on Superchips</strong></p>
+                  <p class="caption-1"><strong>SuperScale: AI Systems for GPU-CPU Superchips</strong></p>
 
                   <p class="caption-1"><strong><a href="https://arxiv.org/pdf/2509.21271">SuperOffload</a></strong> · <strong>ASPLOS 2026</strong> · <strong style="color:red;">Best Paper Honorable Mention</strong> <a href="https://supercomputing-system-ai-lab.github.io/projects/superoffload/">[Project Page]</a></p>
                   <p style="margin-left:25px;">Enabled 25B-parameter training on one GH200 and 1M-token training on eight GH200s at 55% MFU. Featured by the <a href="https://www.linkedin.com/posts/pytorch_superoffload-unleashing-the-power-of-large-scale-activity-7113512167261616128-lfMI">PyTorch Official Blog</a> and <a href="https://events.linuxfoundation.org/pytorch-conference/program/schedule/">PyTorch Conference 2025 Keynote</a>.</p>
 
                   <p class="caption-1"><strong><a href="https://arxiv.org/pdf/2601.20309">SuperInfer</a></strong> · <strong>MLSys 2026</strong> <a href="https://supercomputing-system-ai-lab.github.io/projects/superinfer/">[Project Page]</a></p>
-                  <p style="margin-left:25px;">Eliminated memory-induced head-of-line blocking under high load, improving TTFT SLO attainment by up to 74.7% while maintaining comparable throughput and TBT.</p>
+                  <!-- <p style="margin-left:25px;">Eliminated memory-induced head-of-line blocking under high load, improving TTFT SLO attainment by up to 74.7% while maintaining comparable throughput and TBT.</p> -->
                 </td>
               </tr>
             </tbody>
@@ -410,13 +410,19 @@ a {
               <td width="140"><img src="figs/x-moe.png" width="200" height="200"></td>
               <td width="20"></td>
               <td valign="middle" width="800">
-                <p class="caption-1"><strong>Scalable Training for Trillion-Parameter Mixture-of-Experts Models</strong></p>
+                <p class="caption-1"><strong>X-MoE: Scalable Training and Inference for Trillion-Parameter Mixture-of-Experts Models</strong></p>
 
                 <p class="caption-1"><strong><a href="https://arxiv.org/pdf/2508.13337">X-MoE</a></strong> · <strong>SC 2025</strong> · <strong style="color:red;">Best Student Paper Award</strong> <a href="https://supercomputing-system-ai-lab.github.io/projects/x-moe/">[Project Page]</a></p>
                 <p style="margin-left:25px;">Enabled DeepSeek-style MoE models with up to 545B parameters on 1,024 AMD GPUs, supporting models 10× larger than prior methods under the same hardware budget while maintaining high training throughput.</p>
 
-                <p class="caption-1"><strong>X-MoE-4D</strong> · <strong>SC 2026</strong></p>
-                <p style="margin-left:25px;">Broke the trillion-parameter scaling barrier for emerging MoEs, enabling efficient training across up to 2,048 AMD GPUs.</p>
+                <p class="caption-1"><strong>X-MoE-4D</strong> · <strong>SC 2026</strong> | 
+                <a href="https://beichenhuang.github.io/assets/file/MiLo_effective_MoE_quantization.pdf">MiLo</a></strong> · <strong>MLSys 2025</strong> <a href="https://supercomputing-system-ai-lab.github.io/projects/milo/">[Project Page]</a> |
+                <a href="https://openreview.net/pdf?id=D7pFsC7UAr">PuzzleMoE</a></strong> · <strong>ICML 2026</strong> <a href="https://supercomputing-system-ai-lab.github.io/projects/puzzlemoe/">[Project Page]</a>
+                </p>
+                <!-- <p style="margin-left:25px;">Broke the trillion-parameter scaling barrier for emerging MoEs, enabling efficient training across up to 2,048 AMD GPUs.</p> -->
+                <!-- <p class="caption-1"><strong><a href="https://beichenhuang.github.io/assets/file/MiLo_effective_MoE_quantization.pdf">MiLo</a></strong> · <strong>MLSys 2025</strong> <a href="https://supercomputing-system-ai-lab.github.io/projects/milo/">[Project Page]</a>
+</p>
+                <p style="margin-left:25px;">Enabled efficient 3-bit inference for large MoE models, delivering up to 1.26× speedup over state-of-the-art INT4 kernels with minimal accuracy loss.</p> -->
               </td>
             </tr>
             </tbody>
@@ -461,12 +467,12 @@ a {
               <td width="140"><img src="figs/vecflow.png" width="200" height="200"></td>
               <td width="20"></td>
               <td valign="middle" width="800">
-                <p class="caption-1"><strong>GPU-Accelerated Vector Data Management</strong></p>
+                <p class="caption-1"><strong>VecFlow: GPU-Accelerated Vector Data Management</strong></p>
 
                 <p class="caption-1"><strong><a href="https://arxiv.org/pdf/2506.00812">VecFlow</a></strong> · <strong>SIGMOD 2026</strong> <a href="https://supercomputing-system-ai-lab.github.io/projects/vecflow/filtered/">[Project Page]</a></p>
                 <p style="margin-left:25px;">The first GPU-accelerated filtered vector search system, delivering up to 100× higher throughput than state-of-the-art CPU systems. Recognized in an <a href="https://www.nvidia.com/en-us/on-demand/session/gtc25-s72905/">NVIDIA GTC 2025 talk</a> on GPU-accelerated vector search.</p>
                 <p class="caption-1"><strong><a href="https://dl.acm.org/doi/epdf/10.1145/3786706">VecFlow-Chamfer</a></strong> · <strong>SIGMOD 2026</strong> <a href="https://supercomputing-system-ai-lab.github.io/projects/vecflow/chamfer/">[Project Page]</a></p>
-                <p style="margin-left:25px;">Delivered up to 10× higher throughput than existing GPU-based multi-vector search systems while supporting high-recall Chamfer/MaxSim retrieval.</p></td>
+                <!-- <p style="margin-left:25px;">Delivered up to 10× higher throughput than existing GPU-based multi-vector search systems while supporting high-recall Chamfer/MaxSim retrieval.</p></td> -->
             </tr>
             </tbody>
           </table>
